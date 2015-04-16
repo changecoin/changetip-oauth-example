@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container">
+    <h1>Third-party authentication demo</h1>
+
+    {% if user and not user.is_anonymous %}
+    <p>Hello {{ user.get_full_name|default:user.username }}!</p>
+
+    <h4>Since you're logged in, we were able to get data from an authenticated API Call to /v2/me/:</h4>
+
+    <table>
+    {% for key, value in data.items %}
+    <tr>
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    <a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a>
+    {% else %}
+    <p>
+        <a class="" href="{% url 'social:begin' 'changetip' %}?next={{ request.path }}"><img src="//cdn.changetip.com/img/sign-in-with-changetip.png"></a>
+    </p>
+    {% endif %}
+</div>
+{% endblock %}

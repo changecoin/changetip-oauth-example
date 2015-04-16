@@ -1,0 +1,19 @@
+.DS_Store
+.sass-cache/
+*.pyc
+*.swp
+*.sw0
+.coverage
+*.log
+*.mysql
+*.sql
+node_modules
+
+# jetbrains/pycharm
+.idea
+
+public/CACHE/
+dev_settings.py
+
+uwsgi.restart
+uwsgi.reload
