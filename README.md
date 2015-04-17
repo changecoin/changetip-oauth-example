@@ -29,6 +29,7 @@ You'll also need an account on [ChangeTip](https://www.changetip.com/).
 - Log in to [ChangeTip](https://www.changetip.com/)
 - [Visit the application registration form on ChangeTip](https://www.changetip.com/o/applications/register/)
 - Give your application a name, such as `myTestApp`
+- Under Access Type select "I want to allow users to connect their ChangeTip accout on my site"
 - In the "redirect_uris", enter your ngrok url, followed by /complete/changetip/ - it should look something like: `http://ABCDEFG.ngrok.com/complete/changetip/`
 - Make a note of your `client_id` and `client_secret`, as you'll need these for the next section
 
@@ -38,6 +39,10 @@ You will need to configure a few things before getting started. In `changetip-oa
 
 - `SOCIAL_AUTH_CHANGETIP_KEY = client_id` (use your application's Client ID)
 - `SOCIAL_AUTH_CHANGETIP_SECRET = client_secret` (use your application's Client Secret)
+
+If you're using https, you'll also need to add the following:
+
+- `SOCIAL_AUTH_REDIRECT_IS_HTTPS = True`
 
 ###Testing the example application:
 
