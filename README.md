@@ -14,13 +14,15 @@ You'll also need an account on [ChangeTip](https://www.changetip.com/).
 
 ###Installation:
 
-- Create a directory for your project, and clone this repository there
-- open a terminal and change to that directory
+- Clone this repository. It will create a changetip-oauth-example directory.
+- In changetip-oauth-example/changetip_oauth_example/settings.py, set the SECRET_KEY variable to your Django installation's secret key. If you don't know what it is or have it handy, generate one using [this tool](http://www.miniwebtool.com/django-secret-key-generator/).
+- If your MySQL database has a password, set that in settings.py DATABASES['default']['PASSWORD']
+- We recommend creating a virtualenv for the project using virtualenvwrapper tools (http://virtualenvwrapper.readthedocs.org/en/latest/) and working on that virtual env.
+- From the changetip-oauth-example directory, run the following command: `pip install -r requirements.txt`
 - in MySQL, execute the following command: `CREATE DATABASE changetip_oauth_example;`
-- run the following command: `pip install -r requirements.txt`
 - set up the initial database by running: `python manage.py migrate`
 - start the server by running: `python manage.py runserver`
-- if you're running an app locally (localhost) you'll need to use a tunnel so you can receive external Http requests needed for Oauth2. Ngrok is a good solution. Start ngrok by running: `ngrok 8000`, and make a note of your ngrok url (e.g. http://ABCDEFG.ngrok.com)
+- if you're running an app locally (localhost) you'll need to use a tunnel so you can receive external Http requests needed for Oauth2. [Ngrok](https://ngrok.com/) is a good solution and is trivially easy to set up and use. Start ngrok by running: `ngrok 8000`, and make a note of your ngrok url (e.g. http://ABCDEFG.ngrok.com)
 
 ###Registration of your application on ChangeTip
 
