@@ -10,6 +10,7 @@ def home(request):
             'https://www.changetip.com/v2/me/',
             params={'access_token': social.extra_data['access_token']}
         )
+
         context = RequestContext(request, {'user': request.user, 'data': response.json()})
     except AttributeError:
         context = RequestContext(request, {'user': request.user})
