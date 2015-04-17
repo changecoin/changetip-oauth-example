@@ -18,7 +18,7 @@ class ChangeTipOAuth2(BaseOAuth2):
     def user_data(self, access_token, *args, **kwargs):
         """Loads user data from service"""
         url = 'https://www.changetip.com/v2/me/?' + urlencode({
-            'oauth_consumer_key': access_token
+            'access_token': access_token
         })
         try:
             return json.load(urlopen(url))
