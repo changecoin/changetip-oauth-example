@@ -20,7 +20,7 @@ You'll also need an account on [ChangeTip](https://www.changetip.com/).
 - run the following command: `pip install -r requirements.txt`
 - set up the initial database by running: `python manage.py migrate`
 - start the server by running: `python manage.py runserver`
-- start ngrok by running: `ngrok 8000`, and make a note of your ngrok url (e.g. http://ABCDEFG.ngrok.com)
+- if you're running an app locally (localhost) you'll need to use a tunnel so you can receive external Http requests needed for Oauth2. Ngrok is a good solution. Start ngrok by running: `ngrok 8000`, and make a note of your ngrok url (e.g. http://ABCDEFG.ngrok.com)
 
 ###Registration of your application on ChangeTip
 
