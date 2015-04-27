@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'x8z97bt&itqoukpi2cee#t9tm%&$u+o-f7l=1!6*&7il27-s*%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,6 +42,7 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'changetip_oauth_example.middleware.SocialAuthExceptionMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -136,5 +137,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 LOGIN_REDIRECT_URL = '/'
 
-SOCIAL_AUTH_CHANGETIP_KEY = "YOUR_KEY_HERE"
-SOCIAL_AUTH_CHANGETIP_SECRET = "YOUR_SECRET_HERE"
+SOCIAL_AUTH_CHANGETIP_KEY = "ZYoRJgVnEjDg7tWIrUG4Tf2fh0oWa2YIADQu8WYk"
+SOCIAL_AUTH_CHANGETIP_SECRET = "IIxPWfM1jyfxhOvajqvEIToRI6TIjbSNRmjAUEW5syHK5YdBzjru6J2XwOIoUzVLsQroY2LE36y1WC5ZQfDfpKEgNBNmXLhCkGW5mzTrHVhDtiUjyTjsw2QQHj4ogh8A"
+
+# uncomment this setting if using HTTPS over a proxy like ngrok!
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
