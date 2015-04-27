@@ -63,3 +63,5 @@ the actual authorization and linkage of accounts is taken care of by the `python
 "backend" by default, one is manually added in [backends.py](https://github.com/changecoin/changetip-oauth-example/blob/master/backends.py)
 
 For an example of how the API call is made by the server, see [views.py](https://github.com/changecoin/changetip-oauth-example/blob/master/changetip_oauth_example/views.py)
+
+Also see the Oauth2 [client libraries](http://oauth.net/2/#client-libraries) in your programming language of choice.
