@@ -2,5 +2,5 @@ django==1.8
 oauthlib==0.7.2
 requests==2.6.0
 requests_oauthlib==0.4.2
-python_social_auth==0.2.3
+python_social_auth==0.2.12
 mysql-python==1.2.5
