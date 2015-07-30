@@ -59,8 +59,12 @@ basic data from your user account on ChangeTip.
 
 Because the OAuth2 spec is implemented consistently between many sites, most of the heavy lifting for
 the actual authorization and linkage of accounts is taken care of by the `python-social-auth` and
-`oauthlib` packages without much additional work. Until `python-social-auth` includes a ChangeTip
-"backend" by default, one is manually added in [backends.py](https://github.com/changecoin/changetip-oauth-example/blob/master/backends.py)
+`oauthlib` packages without much additional work. `python-social-auth` even includes a ChangeTip
+"backend" by default.
+
+This example project includes a call back to the `verify-channel-user` endpoint via a custom pipeline
+in `python-social-auth` in order to provide ChangeTip with the user's ID and username as stored in the 
+example application.
 
 For an example of how the API call is made by the server, see [views.py](https://github.com/changecoin/changetip-oauth-example/blob/master/changetip_oauth_example/views.py)
 
