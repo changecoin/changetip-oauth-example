@@ -3,6 +3,7 @@ from django.template.context import RequestContext
 
 import requests
 
+
 def home(request):
     try:
         social = request.user.social_auth.get(provider='changetip')
